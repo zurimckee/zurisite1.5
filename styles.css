@@ -817,7 +817,6 @@ button:hover{
     /* Required styles */
     position: relative; /* make frame position relative */
     aspect-ratio: var(--width) / var(--height);
-    overflow: hidden;
 
     & img {
         width: 100%;
