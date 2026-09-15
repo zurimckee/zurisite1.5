@@ -7,19 +7,21 @@
     <link rel="icon" type="image/png" href="assets/favicon.ico">
     <link rel="stylesheet" href="mediaqueries.css">
 </head>
-    <header>
+     <header class="bignav">
         <title>
             log
         </title>
-        <nav id="desktop-nav">
+        <a  href="index.html">
+            <img href="index.html" src="assets/myname.png" alt="logo" class="logo">
+        </a>
+        <nav>
             <ul class="nav-links">
-                <li><a href="index.html">home</a></li>
                 <li><a href="about.html">about</a></li>
-                <li><a href="contact.html">where to find me</a></li>
+                <li><a href="contact.html">contact</a></li>
                 <li><a href="projects.html">projects</a></li>
                 <li><a href="media.html">media</a></li>
                 <li><a href="art.html">art</a></li>
-                <li><a href="log.html">log</a></li>
+                <li><a href="log.html" class="active">log</a></li>
             </ul>
         </nav> 
         <nav id="hamburger-nav">
@@ -31,7 +33,6 @@
                 </div>
                 <div class="menu-links">
                     <ul>
-                        <li><a href="index.html" onclick="toggleMenu()">home</a></li>
                         <li><a href="about.html" onclick="toggleMenu()">about</a></li>
                         <li><a href="contact.html" onclick="toggleMenu()">contact</a></li>
                         <li><a href="projects.html" onclick="toggleMenu()">projects</a></li>
@@ -73,7 +74,6 @@
                 </button>
             </div>
 
-            <h1> site log </h1>
             <br>
 
             <div class="log-container">
@@ -242,13 +242,23 @@
                         fixed the masonry grid overlap issue, claude was zero help. i lowk have no idea how i fixed it but it works now!
                         next gonna try to get some motion involved especially with the home screen. im seeing some cool portfolios and 
                         am getting fomo. 
+                    </p>
                     <hr>
                     <p>
-                        <small>09.15.2026</small><br>
+                        <small>09.14.2026</small><br>
                         added some motion to the home page, revamped writing page -> media bc i wanted to show what i was currently watching/reading/listening to. felt
                         super inspired today, hopefully will keep it going tomorrow. todo: make separate tables for movies, music, and books, make volume buttons hover,
                         add "now working on" section to projects with a progress bar perchance. also revamp the individual essay pages.
+                    </p>
+                    <hr>
+                    <p>
+                        <small>09.15.2026</small><br> did a lot today, restructured nav layout, got rid of headers for pages, made active state in nav for current page,
+                        and put my logo in the corner as a home button // some subtle branding. still need to sort out the essay pages and finish up the media page but im 
+                        getting behind on work so ill probably give it a minute. i also want to edit this page a little, possibly add some time sorting type stuff so that you
+                        can see the entries from a certain time period, and i want to add some more pictures to the art page. very excited!!
+                    </p>
                 </div>
+
             </div>
         </div>
         <script src="script.js"> </script>

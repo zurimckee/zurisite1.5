@@ -37,8 +37,8 @@ body {
     font-family:'Segoe UI', Tahoma, Verdana, sans-serif ;
     font-size: 16px;
     line-height: 1.6;
-    margin: 40px;
-    padding: 20px;
+    margin: 0px;
+    padding: 0px;
     background-color:#F9F2E8;
     color: #666D96;
     text-align: center;
@@ -83,51 +83,62 @@ p a:hover{
 
 
 /*nav bar*/
-nav{
+
+.logo{
+    width: 100px;
+    height:auto;
+    object-fit: contain;
+    border-radius: 0;
+    box-shadow: none;
+    transition:  0.3s ease;
+}
+
+.logo:hover{
+    transform: scale(1.5);
+
+}
+
+
+
+
+.bignav{
+    top: 100%;
     display: flex;
-    padding: 10px 0;
-    text-align: center;
-    position: sticky;
-    justify-content: center;
-    
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    position: static;
+    top: 0;
+    z-index: 1000;
+    font-weight: 400;
     
 }
 
 
-nav ul{
+
+ul li a{
     list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    
-}
-
-nav ul li{
-    display: inline;
-    text-decoration: dotted;
-    padding: 0 10px;
-    letter-spacing: 0.5px;
-    font-size: 20px;
-    font-weight: 600;
-    
-}
-
-
-nav ul li a{
     color: #7878A2;
     text-decoration: none;
     font-size: 18px;
-    padding:8px 12px;
     transition: 0.3s;
-    display: inline-block;
+    display: inline;
 }
 
-nav ul li a:hover{
+ul li a:hover{
     text-decoration: underline;
     color: #3d4367;
-    border-radius: 12px;
 }
+
+ul li a.active{
+    background-color: #3d4367;          
+    border-radius: 5px;     
+    padding: 2px;
+    color: #E8E5E2;
+}
+
 
 /*misellanious*/ 
 
@@ -161,12 +172,6 @@ hr{
     color: #666D96;
 }
 
-.nav-divider {
-  width: 100%;
-  height: 12px;
-  margin: 1rem 0;
-  opacity: 0.6;
-}
 
 
 /*classes*/
@@ -243,11 +248,12 @@ hr{
     border-radius: 12px;
     max-width: 500px;
     object-fit: cover;
+    transition: 0.5s ease-in-out;
+
 }
 
 .name-img:hover{
     transform: scale(1.2);
-    transition: 0.5s ease-in-out;
 
 }
 
@@ -273,11 +279,13 @@ hr{
     width: 50%;
     height: auto;
     align-items: center;
+    transition: all 0.5s ease-in-out;
+
 }
 
 .home-img:hover{
     transform: scale(1.2);
-    transition: 0.3s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 
@@ -396,7 +404,6 @@ hr{
     position: fixed;
     top: 100%;
     right: 0;
-    background-color: #FAF2E9;
     width: fit-content;
     max-height: 0;
     overflow: hidden;
@@ -493,6 +500,7 @@ hr{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 16px;
+    padding: 10px;
 }
  
 .card-wrap {
@@ -606,7 +614,7 @@ hr{
     border-radius: 6px;
     padding: 6px 12px;
     width: fit-content;
-    transition: background 0.35s;
+    transition: 0.35s;
 
     
 }
@@ -621,6 +629,7 @@ hr{
     text-align: right;
     margin-bottom: 0.75rem;
     letter-spacing: 0.03em;
+    padding: 10px;
 }
 
 .project-paragraph{
@@ -642,10 +651,15 @@ hr{
 }
 
 @media (max-width:  768px){
+    nav{
+        display: none;
+    }
+
     .project-grid{
         grid-template-columns: 1fr;
     }
 }
+
 
 .project-card{
     border: 2px solid #8A8C6F;
@@ -666,7 +680,7 @@ hr{
 
 .link a{
     color:#666D96;
-    font-weight: bold;
+    font-weight: 300px;
     transition: color 0.2s ease;
     font-size: 15px;
     text-align: center;
@@ -676,10 +690,9 @@ hr{
 }
 
 .link a:hover{
-    color:#3d4367;
-    font-weight: bold;
     border-radius: 10px;
     text-decoration: underline;
+    filter: brightness(1.2);
 }
 
 
@@ -742,6 +755,7 @@ hr{
     }
 
 ::-webkit-scrollbar{
+    display: none;
     width: 10px;
     background-color: #7878A2;
 }
@@ -759,7 +773,7 @@ hr{
     align-items: center;
 }
 
-media-card{
+.media-card{
     text-align: left;
     align-items: center;
     display: flex;
@@ -772,9 +786,14 @@ media-card{
     gap: 10px;
 }
 
+svg{
+    transition: 0.5s ease-in-out;
+
+}
+
 svg:hover{
     transform: scale(1.2);
-    transition-duration: 0.3s;
+    filter: brightness(1.2);
     
 }
 
@@ -802,18 +821,17 @@ button:hover{
 
 }
 */
-@view-transition{
-    navigation: auto;
-}
+
 
 .music-player{
     position: fixed;
-    left: 10px;
-    top: 10px;
-    width: 10px;
-    height: 10px;
+    right: 40px;
+    bottom: 25px;
+    width: 30px;
+    height: 30px;
     border: none;
     background: rgba(255, 255, 255, 0);
+    z-index: 1000;
 
 
 }
@@ -821,12 +839,19 @@ button:hover{
 #play-pause img {
     border: none;
     cursor: pointer;
-    width: 75px;
-    height: 75px;
+    width: 60px;
+    height: 60px;
     display: block;
     padding: 0;
-
+    transition: transform 0.3s ease, filter 0.3s ease; 
 }
+
+#play-pause img:hover {
+    transform: scale(1.15); /* Scales the button up by 15% */
+    filter: brightness(1.2); /* Slightly brightens the icon/image on hover */
+}
+
+    
 
 #play-pause{
     background:none;
@@ -837,12 +862,15 @@ button:hover{
     display: block;
 }
 
+
+
 .masonry {
     /* Required styles */
     display: grid;
     overflow: hidden;
     gap: 10px; /* optional, but looks better */
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    padding: 10px;
 
 }
 

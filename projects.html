@@ -7,16 +7,18 @@
     <link rel="icon" type="image/png" href="assets/favicon.ico">
     <link rel="stylesheet" href="mediaqueries.css">
 </head>
-    <header>
+    <header class="bignav">
         <title>
             projects
         </title>
-                <nav id="desktop-nav">
+        <a href="index.html">
+            <img href="index.html" src="assets/myname.png" alt="logo" class="logo">
+        </a>
+        <nav>
             <ul class="nav-links">
-                <li><a href="index.html">home</a></li>
                 <li><a href="about.html">about</a></li>
-                <li><a href="contact.html">where to find me</a></li>
-                <li><a href="projects.html">projects</a></li>
+                <li><a href="contact.html">contact</a></li>
+                <li><a href="projects.html" class="active">projects</a></li>
                 <li><a href="media.html">media</a></li>
                 <li><a href="art.html">art</a></li>
                 <li><a href="log.html">log</a></li>
@@ -31,7 +33,6 @@
                 </div>
                 <div class="menu-links">
                     <ul>
-                        <li><a href="index.html" onclick="toggleMenu()">home</a></li>
                         <li><a href="about.html" onclick="toggleMenu()">about</a></li>
                         <li><a href="contact.html" onclick="toggleMenu()">contact</a></li>
                         <li><a href="media.html" onclick="toggleMenu()">media</a></li>
@@ -46,9 +47,8 @@
         <div class="fade-in"></div>
             <style>
                 body {
-                    font-family: 'Segoe UI';
-                    padding: 2rem;
-                    margin: 0;
+                font-family: 'Segoe UI';
+                  margin: 0;
                 }
                 h1 {
                     border-radius: 12px;
@@ -68,7 +68,6 @@
                 </button>
             </div>
             <br>
-            <h1> projects </h1>
                 
             <div class="filter-bar" id="filters">
                 <button class="filter-btn active" data-filter="all">all</button>
